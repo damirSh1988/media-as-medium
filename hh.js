@@ -33,7 +33,7 @@ function execute() {
                                       <p class="date">7 july</p>
                                   </div>
                                   <div class="top-text">
-                                      <p class="desk1">7 Practical CSS Tips</p>
+                                      <p class="desk1"></p>
                                       <p class="desk2">You not only learn more Python by implementing what you already know but, in the end, you can see how all your hard work pays off.</p>
                                   </div>
                               </div>
@@ -58,10 +58,11 @@ function execute() {
 
     const articles = document.getElementById('newslist');
 
-    data.results.forEach((item) => {
+    data.results.forEach((item, index) => {
     let newArticle = article.replace('class="desk1">', `class="desk1">${item.title}`);
         newArticle = newArticle.replace('class="desk2">', `class="desk2">${item.abstract}`);
         newArticle = newArticle.replace('img src="" alt="logo">', `img src="${item.multimedia[0].url}" alt="logo">`)
+        
     articles.innerHTML += newArticle;
 })  
     })
