@@ -58,7 +58,7 @@ function execute() {
 
     const articles = document.getElementById('newslist');
 
-    data.results.forEach((item, index) => {
+    data.results.forEach((item) => {
     let newArticle = article.replace('class="desk1">', `class="desk1">${item.title}`);
         newArticle = newArticle.replace('class="desk2">', `class="desk2">${item.abstract}`);
         newArticle = newArticle.replace('img src="" alt="logo">', `img src="${item.multimedia[0].url}" alt="logo">`)
